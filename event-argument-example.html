@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jquery tutorial in malayalam</title>
+</head>
+<body>
+
+<img id="mario" src='http://pngimg.com/uploads/mario/mario_PNG88.png' style="width:60px;height:60px;position: fixed;">
+<script src="js/jquery-3.3.1.min.js"></script> 
+
+<script>
+  $(document).ready(function(){
+
+	var left_value = 0;
+	var top_value = 0;
+
+	$(document).keydown(function(e){
+
+		var action = e.keyCode;
+
+		console.log(action);
+
+		if(action==37){
+			// move left
+			left_value = left_value-10;
+			$("#mario").css("left",left_value);
+		}
+		else if(action==39){
+			// move right
+			left_value = left_value + 10;
+			$("#mario").css("left",left_value);
+		}
+		else if (action==38){
+			// up
+			top_value = top_value - 10;
+			$("#mario").css("top",top_value);
+
+		}
+		else if(action==40){
+			// down
+			top_value = top_value + 10;
+			$("#mario").css("top",top_value);
+		}
+
+	})
+
+});
+</script>
+
+
+</body>
+</html>
